@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    {
+        "name": "Debug helloworld",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}\\helloworld.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "console": "integratedTerminal",
+        "preLaunchTask": "Build helloworld.cpp"
+    },
+    {
+        "name": "Debug ScratchPadConsoleCpp",
+        "type": "cppvsdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}\\ScratchPadConsoleCpp.exe",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "console": "integratedTerminal",
+        "preLaunchTask": "Build ScratchPadConsoleCpp.cpp"
+    }
+    ]
+}

@@ -1,0 +1,67 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build helloworld.cpp",
+      "type": "shell",
+      "command": "cl",
+      "args": ["/EHsc", "/Zi", "helloworld.cpp"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false
+      }
+    },
+    {
+      "label": "Run helloworld",
+      "type": "shell",
+      "command": ".\\helloworld.exe",
+      "dependsOn": "Build helloworld.cpp",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true
+      }
+    },
+    {
+      "label": "Build ScratchPadConsoleCpp.cpp",
+      "type": "shell",
+      "command": "cl",
+      "args": ["/EHsc", "/Zi", "ScratchPadConsoleCpp.cpp", "ArmstrongNumber.cpp"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$msCompile"],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false
+      }
+    },
+    {
+      "label": "Run ScratchPadConsoleCpp",
+      "type": "shell",
+      "command": ".\\ScratchPadConsoleCpp.exe",
+      "dependsOn": "Build ScratchPadConsoleCpp.cpp",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true
+      }
+    }
+  ]
+}
