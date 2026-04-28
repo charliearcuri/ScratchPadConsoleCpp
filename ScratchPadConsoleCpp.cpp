@@ -6,6 +6,7 @@ using namespace std;
 
 extern vector<string> armstrongNumber(vector<int> arr);
 
+void handleArmstrongNumber();
 string ltrim(const string& str);
 string rtrim(const string& str);
 
@@ -14,8 +15,15 @@ int main()
 {
     std::cout << "Hello World" << std::endl;
 
+    handleArmstrongNumber();
+
+    return 0;
+}
+
+void handleArmstrongNumber() {
     // Exercise: Write a function that takes a vector of integers and returns a vector of strings with "Yes" if the number is an Armstrong number and "No" if it is not.
     //An Armstrong number is an n-digit number that is equal to the sum of its own digits each raised to the power of n.
+#define COMMENTED_OUT 1
 #ifdef COMMENTED_OUT
     string arr_count_temp;
     getline(cin, arr_count_temp);
@@ -54,7 +62,6 @@ int main()
         std::cout << testNumbers[i] << ": " << results[i] << std::endl;
     }
 #endif
-    return 0;
 }
 
 string ltrim(const string& str) {
